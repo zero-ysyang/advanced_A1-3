@@ -27,8 +27,8 @@ class handler(BaseHTTPRequestHandler):
                 self._send_json(500, {"error": "API 키가 설정되지 않았습니다."})
                 return
 
-            genai.configure(api_key=api_key)
-            model = genai.GenerativeModel("gemini-3.5-flash")
+            # ✅ 최신 SDK 방식: Client 객체 생성
+            client = genai.Client(api_key=api_key)
 
             # 4) 프롬프트 작성
             prompt = f"""
@@ -47,8 +47,11 @@ class handler(BaseHTTPRequestHandler):
 맨몸 운동 위주로, 초보자도 이해하기 쉽게 설명해주세요.
 """
 
-            # 5) Gemini 호출
-            response = model.generate_content(prompt)
+            # 5) Gemini 호출 (최신 방식)
+            response = client.models.generate_content(
+                model="gemini-3.5-flash",
+                contents=prompt,
+            )
             result_text = response.text
 
             # 6) 결과 반환 (줄바꿈을 <br>로 변환하여 HTML 표시용)
