@@ -35,9 +35,9 @@ form.addEventListener("submit", async (e) => {
   showLoading();
   submitBtn.disabled = true;
 
-  // 4) 타임아웃 처리 (AbortController 사용, 15초)
+  // 4) 타임아웃 처리 (AbortController 사용, 30초)
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 15000);
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
 
   try {
     const response = await fetch("/api/recommend", {
