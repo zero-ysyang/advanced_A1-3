@@ -3,12 +3,14 @@
     { "src": "api/recommend.py", "use": "@vercel/python" },
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "css/**", "use": "@vercel/static" },
-    { "src": "js/**", "use": "@vercel/static" }
+    { "src": "js/**", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/recommend", "dest": "api/recommend.py" },
     { "src": "/css/(.*)", "dest": "/css/$1" },
     { "src": "/js/(.*)", "dest": "/js/$1" },
+    { "src": "/images/(.*)", "dest": "/images/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
