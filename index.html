@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>방구석PT | AI 홈트 루틴 추천</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 네비게이션 -->
+  <header class="navbar">
+    <div class="logo">방구석<span>PT</span></div>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="#hero">홈</a></li>
+        <li><a href="#about">서비스 소개</a></li>
+        <li><a href="#ai">AI 추천</a></li>
+        <li><a href="#guide">운동 가이드</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <!-- Hero 섹션 -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>헬스장 갈 시간이 없다면?</h1>
+      <p>AI가 당신의 체력과 목표에 맞춰 홈트 루틴을 추천해드려요.</p>
+      <a href="#ai" class="btn-primary">지금 루틴 추천받기</a>
+    </div>
+  </section>
+
+  <!-- 서비스 소개 -->
+  <section id="about" class="section">
+    <h2>서비스 소개</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🎯 목표 기반 추천</h3>
+        <p>다이어트, 근력 향상, 기초 체력 등 원하는 목표에 맞춘 루틴을 제공합니다.</p>
+      </div>
+      <div class="card">
+        <h3>⏱️ 시간 맞춤형</h3>
+        <p>하루에 낼 수 있는 시간만큼만! 부담 없는 홈트를 설계합니다.</p>
+      </div>
+      <div class="card">
+        <h3>🤖 AI 자세 안내</h3>
+        <p>운동별 자세 주의사항까지 함께 안내해 부상 없이 운동하세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI 운동 추천 -->
+  <section id="ai" class="section ai-section">
+    <h2>AI 운동 추천</h2>
+    <form id="aiForm" class="ai-form">
+      <div class="form-group">
+        <label for="goal">운동 목표</label>
+        <select id="goal" required>
+          <option value="">선택하세요</option>
+          <option value="다이어트">다이어트</option>
+          <option value="근력 향상">근력 향상</option>
+          <option value="기초 체력">기초 체력</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="level">운동 수준</label>
+        <select id="level" required>
+          <option value="">선택하세요</option>
+          <option value="초보자">초보자</option>
+          <option value="중급자">중급자</option>
+          <option value="숙련자">숙련자</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="time">하루 가능 시간 (분)</label>
+        <input type="number" id="time" min="5" max="180" placeholder="예: 30" required />
+      </div>
+
+      <button type="submit" class="btn-primary" id="submitBtn">루틴 추천받기</button>
+    </form>
+
+    <!-- 결과 영역 -->
+    <div id="result" class="result-box hidden"></div>
+  </section>
+
+  <!-- 운동 가이드 -->
+  <section id="guide" class="section">
+    <h2>운동 가이드</h2>
+    <div class="guide-grid">
+      <div class="guide-item">
+        <img src="images/plank.png" alt="플랭크" />
+        <h3>플랭크</h3>
+        <p>코어 강화의 기본! 허리가 꺾이지 않도록 일직선을 유지하세요.</p>
+      </div>
+      <div class="guide-item">
+        <img src="images/pushup.png" alt="푸시업" />
+        <h3>푸시업</h3>
+        <p>가슴과 삼두를 자극! 팔꿈치는 45도로 벌려주세요.</p>
+      </div>
+      <div class="guide-item">
+        <img src="images/squat.png" alt="스쿼트" />
+        <h3>스쿼트</h3>
+        <p>하체 운동의 왕! 무릎이 발끝을 넘지 않게 앉으세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>Q. 운동 기구가 필요한가요?</h3>
+      <p>A. 기본 루틴은 맨몸 운동 위주로 구성됩니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q. 매일 해야 하나요?</h3>
+      <p>A. 주 3~4회를 권장하며, 수준에 맞춰 조절하세요.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 방구석PT. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
