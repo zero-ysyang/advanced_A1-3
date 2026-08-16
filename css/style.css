@@ -37,6 +37,11 @@ h2 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
   position: sticky; top: 0; z-index: 100;
   transition: background-color 0.3s;
 }
+.navbar nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);  /* 자기 너비의 절반만큼 왼쪽 이동 */
+}
 .logo { font-size: 1.4rem; font-weight: bold; }
 .logo span { color: var(--text-color); }              /* ✅ var 추가 */
 .navbar nav ul { display: flex; list-style: none; gap: 20px; }
