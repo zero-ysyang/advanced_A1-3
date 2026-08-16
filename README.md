@@ -56,3 +56,12 @@ http://localhost:8000
 ## 3-1. AI 코딩 도구 사용 과정
 
 ## 3-2. 서비스 스크린샷(데스크톱 + 모바일 + AI 기능 동작 장면)
+
+### 가. 데스크톱
+
+
+### 나. 모바일
+<img width="200" height="389" alt="3" src="https://github.com/user-attachments/assets/cea4d057-b5d0-4937-b0d9-9007bf10aa5d" />&nbsp;&nbsp;&nbsp;&nbsp;
+<img width="200" height="389" alt="2" src="https://github.com/user-attachments/assets/ed16854f-e827-49f1-b7e9-734000218cc7" />&nbsp;&nbsp;&nbsp;&nbsp;
+<img width="200" height="389" alt="1" src="https://github.com/user-attachments/assets/1f950dc1-93c3-4e48-a848-e14f1ec9a4d8" />
+
