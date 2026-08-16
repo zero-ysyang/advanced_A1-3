@@ -29,30 +29,38 @@ body {
 
 h2 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
 
-/* ===== 네비게이션 ===== */
+/* ===== 네비게이션 (수정) ===== */
 .navbar {
   display: flex; justify-content: space-between; align-items: center;
   padding: 15px 30px; background: var(--nav-bg);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky; top: 0; z-index: 100;   /* sticky 유지 */
+  transition: background-color 0.3s;
+}
+.logo { font-size: 1.4rem; font-weight: bold; }   /* 왼쪽 자동 유지 */
+.logo span { color: var(--text-color); }
+
+/* ✅ 메뉴 중앙 정렬 */
+.navbar nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 0;
-  z-index: 100;
-  transition: background-color 0.3s;
 }
-.navbar nav {
-    /* 자기 너비의 절반만큼 왼쪽 이동 */
-}
-.logo { font-size: 1.4rem; font-weight: bold; }
-.logo span { color: var(--text-color); }              /* ✅ var 추가 */
 .navbar nav ul { display: flex; list-style: none; gap: 20px; }
 .navbar nav a {
-  text-decoration: none; color: var(--text-color);    /* ✅ 글자색으로 수정 */
-  font-weight: 500;
-  transition: color 0.2s;
+  text-decoration: none; color: var(--text-color);
+  font-weight: 500; transition: color 0.2s;
 }
-.navbar nav a:hover { color: #ff6b35; }               /* ✅ 호버는 포인트색 */
+.navbar nav a:hover { color: #ff6b35; }
+
+/* ✅ 토글은 오른쪽 유지 */
+.theme-toggle {
+  background: none; border: none; font-size: 1.5rem;
+  cursor: pointer; margin-left: auto; margin-right: 0;
+  transition: transform 0.2s;
+}
+.theme-toggle:hover { transform: scale(1.2); }
+
 .menu-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: var(--text-color); }
 
 /* ===== 다크모드 토글 버튼 ===== */
@@ -101,18 +109,24 @@ h2 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
 }
 .card h3 { margin-bottom: 10px; }
 
-/* ===== AI 폼 ===== */
+/* ===== AI 섹션 글자 검정 고정 (수정) ===== */
 .ai-section { background: #fff7f2; border-radius: 16px; }
+.ai-section h2,
+.ai-section label,
+.ai-section p {
+  color: #222222;   /* 다크모드에서도 검정 유지 */
+}
 .ai-form { max-width: 400px; margin: 0 auto; }
 .form-group { margin-bottom: 18px; }
-.form-group label { display: block; margin-bottom: 6px; font-weight: 500; color: #333; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 500; color: #222222; }
 .form-group select, .form-group input {
   width: 100%; padding: 10px;
-  border: 1px solid var(--border-color);             /* ✅ 변수로 변경 */
+  border: 1px solid var(--border-color);
   border-radius: 8px; font-size: 1rem;
-  background: var(--card-bg);                         /* ✅ 다크모드 대응 */
-  color: var(--text-color);                          /* ✅ 다크모드 대응 */
+  background: #ffffff;   /* 입력창도 흰 배경 유지 */
+  color: #222222;        /* 입력 글자 검정 */
 }
+
 .ai-form .btn-primary {
   width: 100%; background: #ff6b35; color: #fff;
 }
