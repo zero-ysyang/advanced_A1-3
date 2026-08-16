@@ -53,14 +53,12 @@ http://localhost:8000
 <br>
 
 
-## 3-1. AI 코딩 도구 사용 과정
-
-## 3-2. 서비스 스크린샷(데스크톱 + 모바일 + AI 기능 동작 장면)
+## 3. 서비스 스크린샷(데스크톱 + 모바일 + AI 기능 동작 장면)
 
 ### 가. 데스크톱
 <img width="300" height="383" alt="4" src="https://github.com/user-attachments/assets/d8f87156-7d28-473b-9379-95aedf8defd7" />
 <img width="300" height="383" alt="5" src="https://github.com/user-attachments/assets/7feca694-fce2-4dbb-892f-e085b5c84ca6" />
-<img width="300" height="383" alt="7" src="https://github.com/user-attachments/assets/6fedd6d1-f503-498f-be4f-432a7cb64928" />
+<br>
 <img width="300" height="383" alt="6" src="https://github.com/user-attachments/assets/2efbd724-8bdf-46e3-93f8-321ce45ecd46" />
 <img width="300" height="383" alt="8" src="https://github.com/user-attachments/assets/e312ef93-0c2e-4e5d-9cad-20573e76e267" />
 
@@ -68,4 +66,3 @@ http://localhost:8000
 <img width="200" height="389" alt="3" src="https://github.com/user-attachments/assets/cea4d057-b5d0-4937-b0d9-9007bf10aa5d" />&nbsp;&nbsp;&nbsp;&nbsp;
 <img width="200" height="389" alt="2" src="https://github.com/user-attachments/assets/ed16854f-e827-49f1-b7e9-734000218cc7" />&nbsp;&nbsp;&nbsp;&nbsp;
 <img width="200" height="389" alt="1" src="https://github.com/user-attachments/assets/1f950dc1-93c3-4e48-a848-e14f1ec9a4d8" />
-
