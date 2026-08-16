@@ -8,6 +8,43 @@ navMenu.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => navMenu.classList.remove("show"));
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+});
+
+function initTheme() {
+  const themeCheckbox = document.getElementById('theme-checkbox');
+  const themeLabel = document.getElementById('theme-label');
+  const currentTheme = localStorage.getItem('theme');
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+      themeCheckbox.checked = true;
+      themeLabel.textContent = '라이트 모드';
+    } else {
+      themeCheckbox.checked = false;
+      themeLabel.textContent = '다크 모드';
+    }
+  }
+
+  if (currentTheme) {
+    applyTheme(currentTheme);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  } else {
+    applyTheme('light');
+  }
+
+  themeCheckbox.addEventListener('change', (e) => {
+    const newTheme = e.target.checked ? 'dark' : 'light';
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
+
+
 // ===== AI 폼 처리 =====
 const form = document.getElementById("aiForm");
 const resultBox = document.getElementById("result");
