@@ -36,6 +36,7 @@ h2 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   position: sticky; top: 0; z-index: 100;
   transition: background-color 0.3s;
+  margin: 0 auto; 
 }
 .logo { font-size: 1.4rem; font-weight: bold; }
 .logo span { color: var(--text-color); }             
