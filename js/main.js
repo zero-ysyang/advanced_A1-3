@@ -123,3 +123,24 @@ function showResult(text) {
   resultBox.classList.remove("hidden");
   resultBox.innerHTML = `<h3>📋 추천 루틴</h3><div>${text}</div>`;
 }
+
+
+// ===== 다크모드 토글 =====
+const themeToggle = document.getElementById("themeToggle");
+
+// 1) 페이지 로드 시: 저장된 설정 불러오기
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  themeToggle.textContent = "☀️"; // 다크모드면 해 아이콘
+}
+
+// 2) 버튼 클릭 시: 모드 전환
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // 3) 현재 상태 확인 후 아이콘 & 저장값 변경
+  const isDark = document.body.classList.contains("dark-mode");
+
+  themeToggle.textContent = isDark ? "☀️" : "🌙"; // 아이콘 교체
+  localStorage.setItem("theme", isDark ? "dark" : "light"); // 설정 저장
+});
